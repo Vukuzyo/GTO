@@ -1,0 +1,345 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/**/
+header{
+    height: 70px;
+    box-shadow: 10px 0px 10px rgb(13, 13, 14);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.h-buttons{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.h-buttons button{
+    width: 170px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: brown;
+    color: aliceblue;
+    transition: all 0.2s;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.h-buttons button:hover{
+    transition: all 0.2s;
+    transform: scale(1.01);
+    background-color: rgb(143, 37, 37);
+    box-shadow: 0px 6px 10px black;
+}
+
+
+
+.h-title{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    width: 50%;
+}
+
+/**/
+main{
+    height: 75vh;
+}
+
+.what-gto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.gto-title{
+    font-size: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+
+}
+
+.stickman-img{
+    
+}
+.stickman-img img{
+    height: auto;
+    width: 120px;
+}
+
+.gto-info{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 300px;
+    margin: 0;
+}
+.gto-info p{
+    font-size: 20px;
+}
+
+.gto-info-design{
+    display: flex;
+}
+
+.thee-lines{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    width: 10px;
+    align-items: center;
+}
+
+.line-w{
+    width: 2px;
+    background-color: rgb(139, 139, 140);
+    height: 100%;
+}
+.line-b{
+    width: 2px;
+    background-color: rgb(62, 62, 175);
+    height: 70%;
+}
+.line-r{
+    width: 2px;
+    height: 100%;
+    background-color: rgb(228, 58, 58);
+     height: 100%;
+}
+
+.l-footer {
+    /* Сначала сдвигаем вниз на 100px, затем поворачиваем на 45 градусов вокруг центра */
+    transform: translateY(140px) rotate(-45deg);
+    transform-origin: center; /* Гарантирует, что центр вращения — середина блока */
+}
+
+.l-head {
+    /* Сначала сдвигаем вверх на 70px, затем поворачиваем на 45 градусов вокруг центра */
+    transform: translateY(-70px) rotate(-45deg);
+    transform-origin: center; /* Гарантирует, что центр вращения — середина блока */
+}
+
+.normativs{
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: brown;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.btn-contaner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Базовое состояние: скрыто + цветной фильтр */
+.btn-contaner img {
+    opacity: 0;
+    filter: grayscale(1) brightness(1.2);
+    transition: opacity 0.3s ease, filter 0.8s ease;
+
+    /* Каскадные задержки для ИСЧЕЗНОВЕНИЯ (снятие курсора).
+       Дальние исчезают первыми, ближние — последними. */
+    transition-delay: 0s; /* по умолчанию — сброс, переопределим ниже */
+}
+
+/* ЛЕВЫЕ: 1 — дальняя, 6 — ближняя.
+   При исчезновении дальняя (1) уходит раньше всех. */
+.btn-contaner img:nth-of-type(1)  { transition-delay: 0s;    } /* дальняя левая — исчезает первой */
+.btn-contaner img:nth-of-type(2)  { transition-delay: 0.09s; }
+.btn-contaner img:nth-of-type(3)  { transition-delay: 0.18s; }
+.btn-contaner img:nth-of-type(4)  { transition-delay: 0.27s; }
+.btn-contaner img:nth-of-type(5)  { transition-delay: 0.36s; }
+.btn-contaner img:nth-of-type(6)  { transition-delay: 0.45s; } /* ближняя левая — исчезает последней */
+
+/* ПРАВЫЕ: 7 — ближняя, 12 — дальняя.
+   При исчезновении дальняя (12) уходит раньше всех. */
+.btn-contaner img:nth-of-type(7)  { transition-delay: 0.45s; } /* ближняя правая — исчезает последней */
+.btn-contaner img:nth-of-type(8)  { transition-delay: 0.36s; }
+.btn-contaner img:nth-of-type(9)  { transition-delay: 0.27s; }
+.btn-contaner img:nth-of-type(10) { transition-delay: 0.18s; }
+.btn-contaner img:nth-of-type(11) { transition-delay: 0.09s; }
+.btn-contaner img:nth-of-type(12) { transition-delay: 0s;    } /* дальняя правая — исчезает первой */
+
+/* ПОЯВЛЕНИЕ (hover): ближние раньше, дальние позже */
+.btn-contaner:hover img {
+    opacity: 1;
+}
+
+.btn-contaner:hover img:nth-of-type(1)  { filter: hue-rotate(0deg)   saturate(3); transition-delay: 0.45s; }
+.btn-contaner:hover img:nth-of-type(2)  { filter: hue-rotate(40deg)  saturate(3); transition-delay: 0.36s; }
+.btn-contaner:hover img:nth-of-type(3)  { filter: hue-rotate(80deg)  saturate(3); transition-delay: 0.27s; }
+.btn-contaner:hover img:nth-of-type(4)  { filter: hue-rotate(120deg) saturate(3); transition-delay: 0.18s; }
+.btn-contaner:hover img:nth-of-type(5)  { filter: hue-rotate(160deg) saturate(3); transition-delay: 0.09s; }
+.btn-contaner:hover img:nth-of-type(6)  { filter: hue-rotate(200deg) saturate(3); transition-delay: 0s;   }
+.btn-contaner:hover img:nth-of-type(7)  { filter: hue-rotate(240deg) saturate(3); transition-delay: 0s;   }
+.btn-contaner:hover img:nth-of-type(8)  { filter: hue-rotate(280deg) saturate(3); transition-delay: 0.09s; }
+.btn-contaner:hover img:nth-of-type(9)  { filter: hue-rotate(320deg) saturate(3); transition-delay: 0.18s; }
+.btn-contaner:hover img:nth-of-type(10) { filter: hue-rotate(20deg)  saturate(3); transition-delay: 0.27s; }
+.btn-contaner:hover img:nth-of-type(11) { filter: hue-rotate(60deg)  saturate(3); transition-delay: 0.36s; }
+.btn-contaner:hover img:nth-of-type(12) { filter: hue-rotate(100deg) saturate(3); transition-delay: 0.45s; }
+
+.normativs:hover{
+    transition: all 0.5s;
+    transform: scale(1.01);
+    background-color: rgb(143, 37, 37);
+    box-shadow: 0px 2px 10px black;
+   
+}
+
+footer{
+    background-color: #D9D9D9;
+    height: 100px;
+}
+
+.info-block {
+  background-color: #D9D9D9;
+  height: 30px;
+  margin-bottom: 50px;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+}
+
+.marquee-inner {
+  display: flex;
+  white-space: nowrap;
+  /* Анимируем весь контейнер целиком */
+  animation: marquee-full 20s linear infinite; 
+}
+
+.marquee-text {
+  display: inline-block;
+  /* Задаем фиксированное расстояние МЕЖДУ фразами, чтобы они не слипались */
+  padding-right: 200px; 
+}
+
+@keyframes marquee-full {
+  0% {
+    /* Начинаем движение, когда вся лента скрыта за ПРАВЫМ краем экрана */
+    transform: translateX(100vw); 
+  }
+  100% {
+    /* Двигаем влево, пока ВСЯ лента (все 3 текста) полностью не уйдет за ЛЕВЫЙ край */
+    transform: translateX(-100%); 
+  }
+}
+
+/* Опционально: пауза при наведении */
+.info-block:hover .marquee-inner {
+  animation-play-state: paused;
+}
+
+
+
+/*РЕГИСТРАЦИЯ*/
+.form-contaner{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.aut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+}
+
+.aut input{
+    width: 100%;
+    height: 30px;
+    padding: 2px;
+}
+
+.aut button{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(143, 37, 37);
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.reg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+.reg input{
+    width: 100%;
+    height: 30px;
+    padding: 2px;
+}
+
+.reg button{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(143, 37, 37);
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.l-r-head{
+    /* Сначала сдвигаем вверх на 70px, затем поворачиваем на 45 градусов вокруг центра */
+    transform: translateY(-170px) rotate(-45deg);
+    transform-origin: center; /* Гарантирует, что центр вращения — середина блока */
+}
+
+.l-r-footer{
+    /* Сначала сдвигаем вниз на 100px, затем поворачиваем на 45 градусов вокруг центра */
+    transform: translateY(120px) rotate(-45deg);
+    transform-origin: center; /* Гарантирует, что центр вращения — середина блока */
+}
+
+.line-r-w{
+    width: 2px;
+    background-color: rgb(139, 139, 140);
+    height: 100%;
+}
+.line-r-b{
+    width: 2px;
+    background-color: rgb(62, 62, 175);
+    height: 70%;
+}
+.line-r-r{
+    width: 2px;
+    height: 100%;
+    background-color: rgb(228, 58, 58);
+     height: 100%;
+}
+
+.to-autor{
+    font-size: 14px;
+}
+
+.to-reg{
+    font-size: 14px;
+}

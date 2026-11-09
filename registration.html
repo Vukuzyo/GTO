@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="h-title" >ГТО - Твой путь к вершине</div>
+        <div class="h-buttons">
+            <button>Нормативы</button>
+            <button id="redirectButton">На главную</button>
+        </div>
+    </header>
+    <main>
+        <div class="form-contaner">
+            <div class="thee-lines l-r-footer ">
+                    <div class="line-w"></div>
+                    <div class="line-b"></div>
+                    <div class="line-r"></div>
+            </div>
+            <div class="reg-block">
+                <form action="" class="reg">
+                    <input type="text" placeholder="ФИО">
+                    <input type="email" placeholder="почта">
+                    <input type="password" placeholder="пароль">
+                    <input type="password" placeholder="подтвердите пароль">
+                    <button>Зарегестрироваться</button>
+                    <label for="" class="to-autor">Есть аккаунт? Авторизация</label>
+                </form>
+            </div>
+            <div hidden class="aut-block">
+                <form action="" class="aut" >
+                    <input type="email" placeholder="почта">
+                    <input type="password" placeholder="пароль">
+                    <button>Войти</button>
+                    <label for="" class="to-reg"><a href="lk.html">Нет аккаунта? Зарегестрироваться</a></label>
+            </form>
+            </div>
+            
+            <div class="thee-lines l-r-head">
+                    <div class="line-w"></div>
+                    <div class="line-b"></div>
+                    <div class="line-r"></div>
+                </div>
+        </div>
+    </main>
+</body>
+<script>
+    document.getElementById('redirectButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+    to_autor = document.querySelector(".to-autor")
+    to_reg = document.querySelector(".to-reg")
+
+    aut_block = document.querySelector(".aut-block");
+    reg_block = document.querySelector(".reg-block");
+
+
+    l_r_head = document.querySelector(".l-r-head");
+    l_r_footer = document.querySelector(".l-r-footer");
+
+    to_autor.addEventListener("click", function(){
+        reg_block.hidden = true;
+        aut_block.hidden = false;
+        l_r_head.style.transform = "translateY(-90px) rotate(-45deg)";
+        l_r_footer.style.transform = "translateY(50px) rotate(-45deg)";
+    })
+
+    to_reg.addEventListener("click", function(){
+        reg_block.hidden = false;
+        aut_block.hidden = true;
+        l_r_head.style.transform = "translateY(-150px) rotate(-45deg)";
+        l_r_footer.style.transform = "translateY(120px) rotate(-45deg)";
+    })
+    
+
+</script>
+</html>

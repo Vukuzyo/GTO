@@ -19,8 +19,5 @@
     <main>
         
     </main>
-    <script>
-        document.getElementById("toMain");`~
-    </script>
 </body>
 </html>

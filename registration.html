@@ -8,10 +8,12 @@
 </head>
 <body>
     <header>
-        <div class="h-title" >ГТО - Твой путь к вершине</div>
-        <div class="h-buttons">
-            <button>Нормативы</button>
-            <button id="redirectButton">На главную</button>
+        <div class="header-contaner">
+            <div class="h-title" >ГТО - Твой путь к вершине</div>
+            <div class="h-buttons">
+                <button>Нормативы</button>
+                <button id="redirectButton">На главную</button>
+            </div>
         </div>
     </header>
     <main>
@@ -22,21 +24,22 @@
                     <div class="line-r"></div>
             </div>
             <div class="reg-block">
-                <form action="" class="reg">
-                    <input type="text" placeholder="ФИО">
-                    <input type="email" placeholder="почта">
-                    <input type="password" placeholder="пароль">
-                    <input type="password" placeholder="подтвердите пароль">
+                <form action="vendor/registration.php" class="reg" method="post">
+                    <input type="text" placeholder="ФИО" name="fio">
+                    <input type="email" placeholder="Почта" name="email">
+                    <input type="text" placeholder="Номер телефона" name="phone">
+                    <input type="password" placeholder="Пароль" name="password">
+                    <input type="password" placeholder="Подтвердите пароль">
                     <button>Зарегестрироваться</button>
                     <label for="" class="to-autor">Есть аккаунт? Авторизация</label>
                 </form>
             </div>
             <div hidden class="aut-block">
                 <form action="" class="aut" >
-                    <input type="email" placeholder="почта">
-                    <input type="password" placeholder="пароль">
-                    <button>Войти</button>
-                    <label for="" class="to-reg"><a href="lk.html">Нет аккаунта? Зарегестрироваться</a></label>
+                    <input type="email" placeholder="Почта">
+                    <input type="password" placeholder="Пароль">
+                    <button id="toLk">Войти</button>
+                    <label for="" class="to-reg">Нет аккаунта? Зарегестрироваться</label>
             </form>
             </div>
             
@@ -76,6 +79,14 @@
         l_r_footer.style.transform = "translateY(120px) rotate(-45deg)";
     })
     
+    to_lk = document.getElementById('toLk');
+    // console.log(to_lk)
+    to_lk.addEventListener('click', ()=>{
+        event.preventDefault(); 
+        window.location.href = 'lk.html'
+
+        
+    });
 
 </script>
 </html>

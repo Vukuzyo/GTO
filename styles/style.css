@@ -5,6 +5,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 /**/
 header{
     height: 70px;
@@ -12,18 +17,18 @@ header{
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    width: 100%;
 }
 .h-buttons{
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .h-buttons button{
-    width: 170px;
+    width: 190px;
     height: auto;
-    padding: 5px;
+    padding: 7px;
     border-radius: 10px;
     border: none;
     background-color: brown;
@@ -43,14 +48,26 @@ header{
 
 .h-title{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 30px;
     width: 50%;
+}
+
+.header-contaner{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 /**/
 main{
     height: 75vh;
+    width: 70%;
+    margin: auto;
 }
 
 .what-gto{
@@ -206,6 +223,8 @@ main{
 footer{
     background-color: #D9D9D9;
     height: 100px;
+    width: 70%;
+    margin: auto;
 }
 
 .info-block {
@@ -215,6 +234,7 @@ footer{
   overflow: hidden; 
   display: flex;
   align-items: center;
+
 }
 
 .marquee-inner {
@@ -265,17 +285,18 @@ footer{
     width: 300px;
     height: 150px;
     margin: 20px;
+    gap: 5px;
 }
 
 .aut input{
     width: 100%;
-    height: 30px;
+    height: 44px;
     padding: 2px;
 }
 
 .aut button{
     width: 100%;
-    height: 30px;
+    height: 44px;
     background-color: rgb(143, 37, 37);
     border: none;
     color: aliceblue;
@@ -287,20 +308,20 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 400px;
     height: 300px;
     margin: 20px;
 }
 
 .reg input{
     width: 100%;
-    height: 30px;
+    height: 44px;
     padding: 2px;
 }
 
 .reg button{
     width: 100%;
-    height: 30px;
+    height: 44px;
     background-color: rgb(143, 37, 37);
     border: none;
     color: aliceblue;
@@ -342,4 +363,37 @@ footer{
 
 .to-reg{
     font-size: 14px;
+}
+
+/*нормативы*/
+.normativs-main-contaner{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.choose-type{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.select-gender{
+    font-size: 20px;
+}
+
+.age{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.normativs-block{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.normativs-contaner{
+    width: 1000px;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 0px 2px 7px black;
 }

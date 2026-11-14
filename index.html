@@ -8,10 +8,12 @@
 </head>
 <body>
     <header>
-        <div class="h-title">ГТО - Твой путь к вершине</div>
-        <div class="h-buttons">
-            <button>Нормативы</button>
-            <button id="redirectButton">Личный кабинет</button>
+        <div class="header-contaner">
+            <div class="h-title">ГТО - Твой путь к вершине</div>
+            <div class="h-buttons">
+                <button id="toNorm">Нормативы</button>
+                <button id="redirectButton">Личный кабинет</button>
+            </div>
         </div>
     </header>
     <main>
@@ -57,14 +59,15 @@
                 <img src="img/anjumaniya.png" alt="">
             </div>
         </section>
+        <div class="info-block">
+            <div class="marquee-inner">
+                <div class="marquee-text">Управляйте подготовкой, анализируйте результаты и повышайте уровень физической подготовки</div>
+                <div class="marquee-text">Учёт и контроль выполнения нормативов ГТО в вузе</div>
+                <div class="marquee-text">Планируйте подготовку, отслеживайте результаты и получайте рекомендации</div>
+            </div>
+        </div>
     </main>
-    <div class="info-block">
-    <div class="marquee-inner">
-        <div class="marquee-text">Управляйте подготовкой, анализируйте результаты и повышайте уровень физической подготовки</div>
-        <div class="marquee-text">Учёт и контроль выполнения нормативов ГТО в вузе</div>
-        <div class="marquee-text">Планируйте подготовку, отслеживайте результаты и получайте рекомендации</div>
-    </div>
-    </div>
+    
 
 
 
@@ -72,6 +75,10 @@
     <script>
         document.getElementById('redirectButton').addEventListener('click', function() {
             window.location.href = 'registration.html';
+        });
+
+        document.getElementById("toNorm").addEventListener("click", ()=>{
+            window.location.href = "normativs.html"
         });
     </script>
 </body>
